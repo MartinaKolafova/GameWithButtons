@@ -1,0 +1,135 @@
+/* Reset some default styles and add global styles */
+body, h1, p, div, button, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E6F5E3;
+    color: #333;
+    text-align: center;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Game control styles */
+#game-control {
+    margin-top: 20px;
+}
+
+.start-button, .cancel-button, .checking-button {
+    background-color: #45A944;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.start-button:hover, .cancel-button:hover, .checking-button:hover {
+    background-color: #4CAF50;
+}
+
+/* Given text container styles */
+#given-text-container {
+    background-color: #F0FFF7;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin-bottom: 20px;
+}
+
+#given-text {
+    font-size: 24px;
+    color: #4CAF50;
+}
+
+/* Moving button container styles */
+#moving-button-container {
+    background-color: #87CEEB;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 100vw;
+    max-height: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Add relative positioning to create a coordinate system */
+    overflow: hidden; /* Hide any overflowing content */
+
+    /* Additional styles to ensure .moving-button is contained */
+    height: 300px; /* Fill the container's height */
+    width: 300px;
+}
+
+.moving-button {
+    background-color: #F4D03F;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    position: absolute; /* Use absolute positioning within the relative parent */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the button within its container */
+}
+
+.moving-button:hover {
+    background-color: #F7DC6F;
+}
+
+/* Text below canvas styles */
+#testing-area {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#text-below-canvas {
+    padding: 10px;
+    border: 1px solid #af654c;
+    background-color: #F0FFF7;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 300px;
+    font-size: 16px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .start-button, .cancel-button, .moving-button, .checking-button {
+        padding: 8px 16px;
+        margin: 5px;
+    }
+
+    #text-below-canvas {
+        width: 100%;
+    }
+}
